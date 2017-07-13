@@ -1,0 +1,121 @@
+<div id="makingPage" class="col s12 container">
+  <br>
+  <div class="section white">
+    <div class="row">
+      <h2 class="header" style="font-family: 'Dosis'; text-shadow: 2px 2px 2px #aaa">Font Maker</h2>
+      <br>
+      <p>사용법이랑 설명이 들어갈 자리입니당 </p>
+      <br>
+      <br>
+      <h4><a class="deep-purple-text" href="#">Start</a></h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="font_name" type="text" class="validate">
+            <label for="font_name">Font Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="font_note" type="text" class="validate">
+            <label for="font_note">Font Note</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <div class="file-field input-field">
+      <ul class="constainer" id="capital-making">
+        <li>
+          <h4><a class="deep-purple-text text-darken-3" href="#">Capital-making</a></h4>
+          <p>대문자로 쓴 '문장' 이미지를 입력해주세요 :-) </p>
+
+          <form action="/upup" id="testup" method="post" enctype="multipart/form-data">
+            <div class="btn deep-purple lighten-3">
+              <span>File</span>
+              <input type="file" name="capitalImg">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+            <div class="btn-floating deep-purple lighten-3" id="btnSubmit">
+              <i class="material-icons">send</i>
+            </div>
+          </form>
+          <form method="POST" enctype="multipart/form-data" id="testup">
+              <input type="text" name="extraField"/><br/><br/>
+              <input type="file" name="files"/><br/><br/>
+              <input type="file" name="files"/><br/><br/>
+              <div class="btn-floating deep-purple lighten-3" id="btnSubmit">
+                <i class="material-icons">send</i>
+              </div>
+            </form>
+
+
+          <br>
+          <br>
+        </li>
+      </ul>
+
+      <a href="#!" class="btn-floating deep-purple lighten-3" onclick="Materialize.showStaggeredList('#small-making')"><i class="material-icons">add</i></a>
+      <ul class="constainer" id="small-making">
+        <li style="opacity: 0;">
+          <h4><a class="deep-purple-text text-darken-3" href="#">Capital-making</a></h4>
+          <p>소문자로 쓴 '문장' 이미지를 입력해주세요 :-) </p>
+          <div class="btn deep-purple lighten-3">
+            <span>File</span>
+            <input type="file" name="userfile">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </li>
+      </ul>
+      <br>
+
+      <a href="#!" class="btn-floating waves-effect deep-purple lighten-3" onclick="Materialize.showStaggeredList('#number-making')"><i class="material-icons">add</i></a>
+      <ul class="constainer" id="number-making">
+        <li style="opacity: 0;">
+          <h4><a href="#">number-making</a></h4>
+          <p>This is a description</p>
+        </li>
+      </ul>
+      <br>
+
+      <a href="#!" class="btn-floating waves-effect deep-purple lighten-3" onclick="Materialize.showStaggeredList('#special-making')"><i class="material-icons">add</i></a>
+      <ul class="constainer" id="special-making">
+        <li style="opacity: 0;">
+
+
+        </li>
+      </ul>
+
+
+
+
+      <!--
+          <form class="" action="upup" method="post" enctype="multipart/form-data">
+            <input type="file" name="userfile" value="">
+            <input type="submit" name="submit" value="submit">
+          </form>
+      -->
+
+    </div>
+  </form>
+
+
+  <br>
+  <div class="preloader-wrapper active">
+    <div class="spinner-layer">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,51 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  function upload( event ) {
+    event.preventDefault()
+
+    var form = $('#testup')[0]
+    var data = new FormData(form)
+
+    // If you want to add an extra field for the FormData
+    data.append("CustomField", "This is some extra data, testing");
+
+		// disabled the submit button
+    $("#btnSubmit").prop("disabled", true);
+
+    $.post({
+      url: '/upup',
+      enctype: 'multipart/form-data',
+      data: data,
+      processData: false,
+      contentType: false,
+      cache: false,
+      timeout: 600000,
+      success: function (data) {
+
+          $("#result").text(data);
+          console.log(data);
+          $("#btnSubmit").prop("disabled", false);
+
+      },
+      error: function (e) {
+          $("#result").text(e.responseText);
+          console.log("ERROR : ", e);
+          $("#btnSubmit").prop("disabled", false);
+
+      }
+    })
+  }
+
+  $(document).ready(function() {
+    $('.parallax').parallax();
+
+    $(".button-collapse").sideNav();
+
+    $('#modal').modal();
+
+    $("#btnSubmit").click(upload)
+  });
+</script>

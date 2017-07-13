@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+/* label color */
+
+.input-field label {
+  color: #424242;
+}
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #7e57c2;
+}
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #7e57c2;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+.thumblist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.thumblist li {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.thumblist img {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 100%;
+  -ms-interpolation-mode: bicubic;
+  /* Better image scaling in IE */
+}
